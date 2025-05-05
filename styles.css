@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Theme styles */
+body.light {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+body.blue {
+    background-color: #e6f2ff;
+    color: #003366;
+}
+
+/* Button styles */
+button {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#animateBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#savePref {
+    background-color: #2196F3;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation target */
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #FF5722;
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+/* CSS Animation */
+@keyframes spinAndColor {
+    0% {
+        transform: rotate(0deg) scale(1);
+        background-color: #FF5722;
+    }
+    50% {
+        transform: rotate(180deg) scale(1.5);
+        background-color: #FFC107;
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        background-color: #8BC34A;
+    }
+}
+
+.animate {
+    animation: spinAndColor 2s ease-in-out;
+}
+
+/* Form styles */
+.pref-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
